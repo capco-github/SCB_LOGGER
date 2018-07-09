@@ -235,11 +235,12 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/Audit.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${AUDIT_HOME}/Audit.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
+	
 	<appender name="Transaction"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
@@ -248,7 +249,7 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/Transaction.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${TRANSACTION_HOME}/Transaction.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
