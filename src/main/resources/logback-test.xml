@@ -19,13 +19,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/Otp.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="Login"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/Login.log</file><!-- addd respective application 
 			name -->
@@ -33,13 +33,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/Login.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="PhoneNumber"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/PhoneNumber.log</file><!-- addd respective application 
 			name -->
@@ -47,13 +47,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/PhoneNumber.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="SecurityQuestions"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/SecurityQuestions.log</file><!-- addd respective 
 			application name -->
@@ -61,13 +61,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/SecurityQuestions.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
-	<appender name="Payment"
-		class="ch.qos.logback.core.FileAppender">
+	
+	<appender name="Payment" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/Payment.log</file><!-- addd respective application 
 			name -->
@@ -75,13 +75,14 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/Payment.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
+	
 	<appender name="Documents"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/Documents.log</file><!-- addd respective application 
 			name -->
@@ -89,7 +90,7 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/Documents.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
@@ -114,7 +115,7 @@
 		<prudent>true</prudent>
 	</appender>
 	<appender name="PolicyDashboard"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/PolicyDashboard.log</file><!-- addd respective 
 			application name -->
@@ -122,13 +123,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/PolicyDashboard.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="PushNotification"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/PushNotification.log</file><!-- addd respective 
 			application name -->
@@ -136,13 +137,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/PushNotification.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="GetFNA"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/GetFNA.log</file><!-- addd respective application 
 			name -->
@@ -150,13 +151,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/GetFNA.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="GetFit"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/GetFit.log</file><!-- addd respective application 
 			name -->
@@ -164,13 +165,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/GetFit.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="ActivityLog"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/ActivityLog.log</file><!-- addd respective application 
 			name -->
@@ -178,12 +179,12 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/ActivityLog.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
-	<appender name="CMS" class="ch.qos.logback.core.FileAppender">
+	<appender name="CMS" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/CMS.log</file><!-- addd respective application 
 			name -->
@@ -191,13 +192,13 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/CMS.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="CustomerRegistration"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/CustomerRegistration.log</file><!-- addd respective 
 			application name -->
@@ -205,14 +206,14 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/CustomerRegistration.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 
 	<appender name="GeneralApplication"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${APPLICATION_HOME}/GeneralApplication.log</file><!-- addd respective 
 			application name -->
@@ -220,30 +221,34 @@
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/GeneralApplication.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 
 	<appender name="Audit"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${AUDIT_HOME}/Audit.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/Audit.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="Transaction"
-		class="ch.qos.logback.core.FileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
 		<file>${TRANSACTION_HOME}/Transaction.log</file>
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<fileNamePattern>${APPLICATION_HOME}/Transaction.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<totalSizeCap>2GB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
