@@ -10,13 +10,18 @@
 		</encoder>
 	</appender>
 
-	<appender name="Otp" class="ch.qos.logback.core.FileAppender">
+		<appender name="Otp"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
-		<file>${APPLICATION_HOME}/Otp.log</file><!-- addd respective application 
-			name -->
+		<file>${APPLICATION_HOME}/Otp.log</file>addd respective application 
+			name
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="Login"
@@ -27,6 +32,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="PhoneNumber"
@@ -37,6 +46,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="SecurityQuestions"
@@ -47,6 +60,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="Payment"
@@ -57,6 +74,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="Documents"
@@ -67,19 +88,12 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
-<!-- 	<appender name="MyAccount"
-		class="ch.qos.logback.core.FileAppender">
-		<append>true</append>
-		<file>${APPLICATION_HOME}/MyAccount.log</file>addd respective application 
-			name
-		<layout class="ch.qos.logback.classic.PatternLayout">
-			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
-		</layout>
-		<prudent>true</prudent>
-	</appender> -->
-	
 	<appender name="MyAccount"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
@@ -107,6 +121,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="PushNotification"
@@ -117,6 +135,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="GetFNA"
@@ -127,6 +149,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="GetFit"
@@ -137,6 +163,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="ActivityLog"
@@ -147,6 +177,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="CMS" class="ch.qos.logback.core.FileAppender">
@@ -156,6 +190,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 	<appender name="CustomerRegistration"
@@ -166,6 +204,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 
@@ -177,6 +219,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 
@@ -196,6 +242,10 @@
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
 
@@ -251,7 +301,7 @@
 	<logger name="Transaction" level="info">
 		<appender-ref ref="Transaction" />
 	</logger>
-
+	
 	<logger name="Audit" level="info">
 		<appender-ref ref="Audit" />
 	</logger>
