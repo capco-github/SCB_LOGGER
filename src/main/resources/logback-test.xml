@@ -105,7 +105,7 @@
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 		<fileNamePattern>${APPLICATION_HOME}/MyAccount.%d{yyyy-MM-dd}.log</fileNamePattern>
-		<totalSizeCap>1GB</totalSizeCap>
+		<totalSizeCap>2GB</totalSizeCap>
 		
 		<!-- keep 30 days' worth of history capped at 3GB total size -->
       	<!-- <maxHistory>30</maxHistory>
@@ -300,7 +300,6 @@
 	<logger name="CustomerRegistration" level="info">
 		<appender-ref ref="CustomerRegistration" />
 	</logger>
-
 	<logger name="GeneralApplication" level="info">
 		<appender-ref ref="GeneralApplication" />
 	</logger>
