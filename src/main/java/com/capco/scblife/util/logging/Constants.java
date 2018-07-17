@@ -24,6 +24,8 @@ public class Constants {
 		loggerNames.put("CMS", "CMS");
 		loggerNames.put("CustomerRegistration", "CustomerRegistration");
 		loggerNames.put("GeneralApplication", "GeneralApplication");
+		loggerNames.put("FitSense", "FitSense");
+		
     }
 
 }

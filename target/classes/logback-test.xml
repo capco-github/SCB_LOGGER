@@ -254,6 +254,20 @@
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
+	<appender name="FitSense"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<file>${APPLICATION_HOME}/FitSense.log</file><!-- addd respective application 
+			name -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/FitSense.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
+		<prudent>true</prudent>
+	</appender>
 
 	<root level="info">
 		<appender-ref ref="STDOUT" />
@@ -309,6 +323,9 @@
 	
 	<logger name="Audit" level="info">
 		<appender-ref ref="Audit" />
+	</logger>
+	<logger name="FitSense" level="info">
+		<appender-ref ref="FitSense" />
 	</logger>
 
 </configuration> 
