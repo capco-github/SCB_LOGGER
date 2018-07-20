@@ -268,6 +268,20 @@
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
+		<appender name="CallMeBack"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<file>${APPLICATION_HOME}/CallMeBack.log</file><!-- addd respective application 
+			name -->
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/CallMeBack.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<totalSizeCap>2GB</totalSizeCap>
+      		</rollingPolicy>
+		<prudent>true</prudent>
+	</appender>
 
 	<root level="info">
 		<appender-ref ref="STDOUT" />
@@ -327,5 +341,7 @@
 	<logger name="FitSense" level="info">
 		<appender-ref ref="FitSense" />
 	</logger>
-
+	<logger name="CallMeBack" level="info">
+		<appender-ref ref="CallMeBack" />
+	</logger>
 </configuration> 
