@@ -197,17 +197,35 @@
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
-	<appender name="CustomerRegistration"
+<!-- 	<appender name="CustomerRegistration"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<append>true</append>
-		<file>${APPLICATION_HOME}/CustomerRegistration.log</file><!-- addd respective 
-			application name -->
+		<file>${APPLICATION_HOME}/CustomerRegistration.log</file>addd respective 
+			application name
 		<layout class="ch.qos.logback.classic.PatternLayout">
 			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 		<fileNamePattern>${APPLICATION_HOME}/CustomerRegistration.%d{yyyy-MM-dd}.log</fileNamePattern>
 		<maxFileSize>1KB</maxFileSize>
+      		</rollingPolicy>
+		<prudent>true</prudent>
+	</appender> -->
+   <appender name="CustomerRegistration"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<file>${APPLICATION_HOME}/CustomerRegistration.log</file>addd respective 
+			application name
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+		</layout>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<fileNamePattern>${APPLICATION_HOME}/CustomerRegistration.%d{yyyy-MM-dd}.log</fileNamePattern>
+		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+            <maxFileSize>1KB</maxFileSize>
+        </timeBasedFileNamingAndTriggeringPolicy>
+		
+
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
