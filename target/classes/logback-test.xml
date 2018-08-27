@@ -207,7 +207,7 @@
 		</layout>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 		<fileNamePattern>${APPLICATION_HOME}/CustomerRegistration.%d{yyyy-MM-dd}.log</fileNamePattern>
-		<totalSizeCap>2GB</totalSizeCap>
+		<totalSizeCap>1KB</totalSizeCap>
       		</rollingPolicy>
 		<prudent>true</prudent>
 	</appender>
